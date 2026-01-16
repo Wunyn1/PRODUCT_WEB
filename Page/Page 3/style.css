@@ -1,0 +1,191 @@
+/* --- BIẾN MÀU & RESET --- */
+:root {
+    --bg-white: #ffffff;
+    --bg-black: #000000;
+    --text-black: #000000;
+    --text-gray: #555555;
+    --border-light: #e0e0e0;
+    --border-dark: #333333;
+    --nasa-red: #f64137;
+    --nasa-blue: #0b3d91;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-black);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- HEADER --- */
+.nasa-header {
+    background: var(--bg-black); color: white;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 40px; border-bottom: 1px solid var(--border-dark);
+}
+.header-left, .header-right { display: flex; gap: 20px; align-items: center; font-size: 0.9rem; font-weight: 700; }
+.search-bar { background: #222; border: 1px solid #444; color: white; padding: 8px; border-radius: 4px; }
+.nasa-logo {
+    width: 50px; height: 50px; background: var(--nasa-blue); border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; font-weight: 800; font-family: serif; color: white;
+}
+.live-badge { border: 1px solid white; padding: 4px 8px; font-size: 0.75rem; letter-spacing: 1px; }
+.live-red { color: var(--nasa-red); margin-left: 5px; }
+
+/* --- SUB NAV --- */
+.breadcrumbs-container { background: var(--bg-black); padding: 10px 40px; }
+.breadcrumbs { color: #999; font-size: 0.85rem; }
+.current { color: white; }
+
+.sub-nav { background: var(--bg-black); color: white; padding: 10px 40px 20px 40px; }
+.sub-nav-content { display: flex; gap: 30px; font-size: 0.95rem; font-weight: 700; }
+.sub-nav a:hover { color: #ccc; }
+
+/* --- HERO SECTION (PHẦN MỚI) --- */
+.hero-section {
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đôi màn hình: 50% Title - 50% Widget */
+    gap: 80px;
+    align-items: start;
+}
+
+/* Cột trái: Title */
+.hero-title h1 {
+    font-size: 6rem; /* Chữ cực lớn */
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -3px;
+    color: var(--text-black);
+}
+
+/* Cột phải: 10 Things Widget */
+.hero-widget {
+    padding-top: 20px;
+}
+.widget-border { width: 100%; height: 1px; background: #ccc; margin-bottom: 20px; }
+.widget-eyebrow { 
+    font-size: 0.75rem; letter-spacing: 3px; color: #888; 
+    text-transform: uppercase; display: block; margin-bottom: 15px; font-weight: 600;
+}
+
+.widget-content {
+    display: flex; justify-content: space-between; gap: 30px;
+}
+
+.widget-text { flex: 1; }
+.widget-text p { font-size: 1.1rem; line-height: 1.5; margin-bottom: 20px; color: #000; }
+
+.widget-nav { display: flex; gap: 10px; }
+.nav-btn {
+    width: 45px; height: 45px; border-radius: 50%; border: 1px solid #ccc;
+    background: transparent; color: #000; font-size: 1.5rem; cursor: pointer;
+    display: flex; justify-content: center; align-items: center; transition: 0.2s;
+}
+.nav-btn:hover { border-color: #000; background: #f9f9f9; }
+
+.widget-image img {
+    width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+}
+
+/* --- MAIN LAYOUT --- */
+.main-layout {
+    display: grid; grid-template-columns: 250px 1fr; gap: 80px;
+    max-width: 1400px; margin: 0 auto; padding: 0 40px 100px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar { position: sticky; top: 20px; height: fit-content; }
+.sidebar h3 { font-size: 0.8rem; color: var(--text-gray); margin-bottom: 20px; letter-spacing: 1px; font-weight: 700; }
+.sidebar ul { border-left: 1px solid var(--border-light); }
+.sidebar li a {
+    display: block; padding: 12px 0 12px 20px; color: var(--text-gray);
+    border-left: 2px solid transparent; margin-left: -1px;
+}
+.sidebar li a:hover, .sidebar li a.active {
+    color: var(--text-black); font-weight: 600; border-left-color: var(--text-black);
+}
+
+/* --- CONTENT --- */
+.content { max-width: 950px; }
+.section { margin-bottom: 60px; }
+.section h2 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -1px; }
+.section p { color: #333; font-size: 1.15rem; margin-bottom: 20px; }
+.section a { color: var(--text-black); text-decoration: underline; text-decoration-thickness: 1px; }
+.divider { border: 0; border-top: 1px solid var(--border-light); margin: 60px 0; }
+
+.media-block { margin-top: 30px; }
+.media-block img { width: 100%; display: block; }
+.caption-bar {
+    background: #000; color: white; padding: 10px 20px;
+    display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700;
+}
+
+/* --- MOON WIDGET --- */
+.moon-widget { margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 30px; }
+.moon-widget h3 { margin-bottom: 20px; font-weight: 700; font-size: 1.3rem; }
+.widget-body { display: flex; align-items: center; }
+.moon-icon-large { font-size: 3.5rem; margin-right: 20px; opacity: 0.5; filter: grayscale(100%); }
+.widget-text h4 { font-size: 2rem; font-weight: 700; margin-bottom: 5px; }
+.red-arrow-btn {
+    width: 40px; height: 40px; background: var(--nasa-red); color: white; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; font-size: 1.2rem;
+}
+
+/* --- NEWS GRID --- */
+.news-section h2 { font-size: 2.5rem; margin-bottom: 40px; }
+.news-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; height: 500px; }
+.news-card { position: relative; background-size: cover; background-position: center; cursor: pointer; }
+.big-card { grid-column: 1 / 2; grid-row: 1 / 3; }
+.tall-card { grid-column: 2 / 3; grid-row: 1 / 3; }
+.right-col { grid-column: 3 / 4; grid-row: 1 / 3; display: flex; flex-direction: column; gap: 20px; }
+.small-card { flex: 1; }
+.card-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); color: white;
+}
+.tag { border: 1px solid rgba(255,255,255,0.5); padding: 2px 6px; font-size: 0.7rem; font-weight: 700; margin-right: 10px; }
+.news-card h4 { font-size: 1.3rem; margin-top: 10px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+
+/* --- DISCOVER --- */
+.discover-section { margin-top: 80px; }
+.keep-exploring { font-size: 0.75rem; letter-spacing: 2px; color: var(--text-gray); font-weight: 700; }
+.discover-section h2 { font-size: 2.5rem; margin-bottom: 30px; }
+.discover-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.topic-card { height: 400px; background-size: cover; background-position: center; position: relative; }
+.topic-footer {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.red-circle { width: 30px; height: 30px; background: var(--nasa-red); border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+
+/* --- FOOTER --- */
+.nasa-footer { background: var(--bg-black); color: white; padding: 60px 40px; margin-top: 100px; }
+.footer-top { display: flex; gap: 80px; margin-bottom: 60px; }
+.footer-links a { color: white; font-weight: 600; font-size: 0.95rem; display: block; margin-bottom: 10px; }
+.social-icons i { width: 30px; height: 30px; background: #333; display: inline-flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 10px; font-style: normal; }
+.footer-bottom { border-top: 1px solid #333; padding-top: 30px; display: flex; justify-content: space-between; color: #aaa; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .hero-container { grid-template-columns: 1fr; gap: 40px; } /* Mobile: xếp chồng lên nhau */
+    .hero-title h1 { font-size: 4rem; }
+    .main-layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .news-grid { grid-template-columns: 1fr 1fr; height: auto; }
+    .big-card, .tall-card { grid-column: auto; grid-row: auto; height: 300px; }
+    .right-col { grid-column: auto; grid-row: auto; height: 620px; }
+    .discover-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { flex-direction: column; gap: 40px; }
+}
