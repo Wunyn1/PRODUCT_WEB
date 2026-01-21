@@ -89,6 +89,7 @@ header a{
   left: 0;
   background-color: black;
   padding-bottom: 20px;
+  z-index: 10;
 }
 .menu-level-2 li{
   padding: 10px;
