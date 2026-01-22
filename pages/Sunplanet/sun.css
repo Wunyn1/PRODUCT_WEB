@@ -69,32 +69,19 @@ ul {
 }
 
 .hero {
-	background-color: #000;
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../assests/images/mat-troi3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	color: #fff;
 	padding: 60px 40px;
 	position: relative;
-	min-height: 80vh;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-}
-
-.hero::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: -10%;
-	width: 60%;
-	height: 100%;
-	background: radial-gradient(
-		circle,
-		#ff4500 20%,
-		#ff8c00 50%,
-		transparent 70%
-	);
-	z-index: 1;
-	opacity: 0.8;
-	filter: blur(20px);
+	margin-top: 0;
 }
 
 .hero-content {
@@ -104,13 +91,13 @@ ul {
 }
 
 .hero h1 {
-	font-size: 80px;
+	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
 .hero p {
-	font-size: 18px;
+	font-size: 12px;
 	margin-bottom: 40px;
 }
 
@@ -120,22 +107,22 @@ ul {
 }
 
 .stat-item h2 {
-	font-size: 40px;
+	font-size: 30px;
 	color: #4da6ff;
 	margin-bottom: 5px;
 }
 
 .stat-item span {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-
 .content-section {
 	padding: 60px 40px;
 	max-width: 900px;
-	margin: 0 auto; 
+	margin: 0 auto;
+	padding: 20px 100px;
 }
 
 .content-block {
@@ -143,16 +130,17 @@ ul {
 }
 
 .content-block h2 {
-	font-size: 36px;
+	padding-top: 20px;
+	font-size: 30px;
 	margin-bottom: 20px;
 	color: #000;
 }
 
 .content-block p {
 	margin-bottom: 15px;
+	font-size: 12px;
 	color: #444;
 }
-
 
 .featured-story {
 	background-color: #3e0e0e;
@@ -161,27 +149,29 @@ ul {
 	position: relative;
 	background-image:
 		linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
-		url("https://via.placeholder.com/1200x600/550000/ffffff?text=Sun+Flare+Image"); 
+		url("../../assests/images/Parker\ Into\ the\ Sun.png");
 	background-size: cover;
 	background-position: center;
 }
 
 .featured-content {
-	max-width: 600px;
+	max-width: 340px;
+	font-size: 12px;
 }
 
 .featured-tag {
-	font-size: 12px;
+	margin-top: 10px;
+	font-size: 8px;
 	letter-spacing: 1px;
-	margin-bottom: 10px;
 	display: block;
 	text-transform: uppercase;
 }
 
 .featured-content h2 {
-	font-size: 48px;
+	font-size: 30px;
 	line-height: 1.1;
 	margin-bottom: 20px;
+	padding: 20px 0;
 }
 
 .read-btn {
@@ -204,16 +194,18 @@ ul {
 .col-text {
 	flex: 1;
 	min-width: 300px;
+	font-size: 12px;
 }
 
 .col-text h2 {
-	font-size: 36px;
+	font-size: 25px;
 	margin-bottom: 20px;
 }
 
 .col-image {
 	flex: 1;
 	min-width: 300px;
+	font-size: 8px;
 }
 
 .col-image img {
@@ -221,7 +213,6 @@ ul {
 	border-radius: 4px;
 }
 
-/* --- GRID SECTION (SUN STORIES) --- */
 .stories-section {
 	padding: 40px 40px;
 	background-color: #f9f9f9;
@@ -259,7 +250,7 @@ ul {
 
 .card-title {
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 15px;
 	margin-top: 10px;
 }
 
@@ -279,6 +270,7 @@ ul {
 .planet-card {
 	min-width: 200px;
 	height: 300px;
+	font-size: 12px;
 	background-color: #222;
 	position: relative;
 	border-radius: 8px;
@@ -286,31 +278,59 @@ ul {
 	display: flex;
 	align-items: flex-end;
 	padding: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .planet-mercury {
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), #555;
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("../../assests/images/mercury.webp");
 }
 .planet-venus {
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), #d4a017;
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("../../assests/images/venus.webp");
 }
 .planet-earth {
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), #0044cc;
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("../../assests/images/earth-1-jpg.webp");
 }
 .planet-mars {
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), #cc3300;
+	background-image:
+		linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+		url("../../assests/images/pia04304-mars.webp");
 }
 
 .planet-card h3 {
-	font-size: 24px;
+	font-size: 15px;
 }
 
-.main-footer {
+footer {
 	background-color: #000;
 	color: #aaa;
-	padding: 40px;
 	border-top: 1px solid #333;
 	font-size: 12px;
+}
+footer .logo img {
+	margin-left: 20px;
+	height: 50px;
+	width: 50px;
+}
+.footer {
+	padding: 0 20px;
 	display: flex;
-	justify-content: space-between;
+}
+.footer-info {
+	width: 300px;
+}
+.footer-info p {
+	font-size: 11px;
+}
+.footer-card {
+	display: flex;
+	gap: 30px;
+	padding-left: 50px;
 }
